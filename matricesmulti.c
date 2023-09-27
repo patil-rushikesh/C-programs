@@ -21,6 +21,19 @@
 				}
 			}
 		}
+		for (i = 0; i < 3; i++) {
+        		for (j = 0; j < 3; j++) {
+            			sum[i][j] = a[i][j] + b[i][j];
+        		}
+    		}
+		printf("\nMatrix Addition:\n");
+    		for (i = 0; i < 3; i++) {
+       			for (j = 0; j < 3; j++) {
+           			 printf("%d ", sum[i][j]);
+        		}
+        		printf("\n");
+   		}
+		
 		printf("Multiplication of matrix is : \n");
 		for(i=0; i<=2; i++){
 			for(j=0; j<=2; j++){
