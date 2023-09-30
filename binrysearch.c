@@ -16,19 +16,10 @@ int main(){
     
     l=0;
     r=a-1;
-    while (l != r)
+    while (l <= r)
     {
          m=(l+r)/2;
-        if(data[l] == n){
-            l++;
-            printf("Element is at location %d",l);
-            exit(0);
-        }
-        if(data[r] == n){
-            r++;
-            printf("Element is at location %d",r);
-            exit(0);
-        }
+        
         if( data[m] == n ){
             m++;
             printf("Element is at location %d",m);
