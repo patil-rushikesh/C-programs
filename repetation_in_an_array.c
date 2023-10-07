@@ -31,6 +31,7 @@ int main(){
     //repeatation
     int r=1,i=0;
     while(i<a){
+        r=1;
     while(data[i]==data[i+1]){
         r++;
         i++;
