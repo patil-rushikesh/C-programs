@@ -28,20 +28,18 @@ int main(){
         printf("%d ",data[k]);
     }
      printf("\nHistogram:  \n");
-    for(int k=0; k<a; k++)
+    int max = data[0];
+    for(int i=0; i <= max; i++)
     {
-        for(int i=1; i <= a; i++)
+        for(int j=0; j<=a; j++)
         {
-            for(int j = 1; j < data[k]; j++){
-                if(i > data[k])
-                {
-                    printf(" ");
+                if(data[j] <= i ){
+                    printf("  ");
                 }else{
-                    printf("*");
+                    printf("* ");
                 }
-            }
-            printf("\n");
         }
+        printf("\n");
     }
     
 }
