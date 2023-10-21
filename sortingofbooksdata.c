@@ -42,50 +42,53 @@ void sortbydor(struct booksdata b[], int i)
 void sortbyname(struct booksdata b[], int i)
 {
     struct booksdata temp;
-    for (int k = 0; k < i; k++)
+   for (int k = 0; k < i; k++)
     {
         for (int j = k + 1; j <= i; j++)
         {
-            if (b[j].name < b[k].name)
-            {
+         // swapping strings if they are not in the lexicographical order
+         if (strcmp(b[j].name, b[k].name) < 0) {
                 temp = b[k];
                 b[k] = b[j];
                 b[j] = temp;
-            }
-        }
-    }
+         }
+      }
+   }
+
 }
 void sortbyauthor(struct booksdata b[], int i)
 {
     struct booksdata temp;
-    for (int k = 0; k < i; k++)
+   for (int k = 0; k < i; k++)
     {
         for (int j = k + 1; j <= i; j++)
         {
-            if (b[j].author < b[k].author)
-            {
+         // swapping strings if they are not in the lexicographical order
+         if (strcmp(b[j].author, b[k].author) < 0) {
                 temp = b[k];
                 b[k] = b[j];
                 b[j] = temp;
-            }
-        }
-    }
+         }
+      }
+   }
+
 }
 void sortbygenre(struct booksdata b[], int i)
 {
     struct booksdata temp;
-    for (int k = 0; k < i; k++)
+   for (int k = 0; k < i; k++)
     {
         for (int j = k + 1; j <= i; j++)
         {
-            if (b[j].genre < b[k].genre)
-            {
+         // swapping strings if they are not in the lexicographical order
+         if (strcmp(b[j].genre, b[k].genre) < 0) {
                 temp = b[k];
                 b[k] = b[j];
                 b[j] = temp;
-            }
-        }
-    }
+         }
+      }
+   }
+
 }
     int main()
     {
@@ -110,6 +113,8 @@ void sortbygenre(struct booksdata b[], int i)
             i++;
         }
         i--;
+        int menu = 1;
+        while(menu == 1){
         printf("Sort According to (Enter the number) : \n1. Book Id \n2. Name \n3. Author \n4. Date of released \n5.Genre\n");
         int a;
         scanf("%d", &a);
@@ -137,5 +142,8 @@ void sortbygenre(struct booksdata b[], int i)
              printf("Book Genre : %s\n",b1[a].genre);
              printf("-------------------------------------------\n");
          }
+         printf("Do you wish to sort again? (yes 1/ No 0)");
+            scanf("%d", &menu);
+        }
         return 0;
     }
