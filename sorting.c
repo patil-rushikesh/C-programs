@@ -1,3 +1,4 @@
+//Bubble sorting 
 #include<stdio.h>
 int main(){
     int a,temp,x;
